@@ -1,7 +1,28 @@
-import type { Current } from "./Current";
-import type  { Location } from "./Location"
-
 export type Weather = {
-    location: Location;
-    current: Current;
-}
+    location: {
+      name: string;
+    };
+    current: {
+      temp_c: number;
+      condition: {
+        text: string;
+        icon: string;
+      };
+    };
+    forecast: {
+      forecastday: ForecastDay[];
+    };
+  };
+  
+  export type ForecastDay = {
+    date: string;
+    day: {
+      avgtemp_c: number;
+      mintemp_c: number;
+      maxtemp_c: number;
+      condition: {
+        text: string;
+        icon: string;
+      };
+    };
+  };

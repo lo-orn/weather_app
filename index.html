@@ -6,34 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>weather-app</title>
   </head>
-  <body class="min-h-screen bg-gray-300">
+  <body
+    class="min-h-screen bg-linear-to-b from-slate-50 to-slate-200 text-slate-900"
+  >
     <div id="app" class="min-h-screen flex items-center justify-center p-6">
       <main
-        class="w-full max-w-lg bg-black shadow-lg border-2 border-white p-6 rounded-xl"
+        class="w-full max-w-xl rounded-3xl border border-white/40 bg-white/70 backdrop-blur-xl shadow-[0_20px_60px_-25px_rgba(15,23,42,0.35)] p-8"
       >
         <h2
           id="quote"
-          class="text-center text-1xl font-bold mb-6 text-white"
+          class="text-center text-2xl font-semibold tracking-tight text-slate-900 mb-6"
         ></h2>
         <form id="searchForm" class="flex flex-col sm:flex-row gap-3">
-          <label for="search"></label>
+          <label for="searchText"></label>
           <input
-            class="flex-1 rounded-xl text-white border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-300"
+            class="flex-1 rounded-2xl border border-slate-200 bg-white/70 px-5 py-3 text-base placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-sky-200 focus:border-sky-300 transition"
             type="text"
             name="searchText"
             id="searchText"
           />
+          <select
+            id="daysSelect"
+            class="p-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-sky-200"
+          >
+            <option value="1">Today</option>
+            <option value="3">3 days</option>
+            <option value="5">5 days</option>
+            <option value="7">7 days</option>
+            <option value="10">10 days</option>
+            <option value="14">14 days</option>
+          </select>
           <button
+            type="submit"
             id="searchBtn"
-            class="rounded-xl bg-gray-300 px-6 py-3 font-semibold hover:bg-gray-700 transition text-black dark:bg-gray-300 dark:text-black"
+            class="rounded-2xl bg-slate-900 px-6 py-3 text-white font-semibold shadow-sm hover:shadow-md hover:bg-slate-800 active:scale-[0.99] transition"
           >
             Search
           </button>
         </form>
+        <h2
+          id="locationHeader"
+          class="text-l font-semibold mt-6 text-center"
+        ></h2>
 
         <div
           id="results"
-          class="text-white mt-6 flex flex-row gap-3 justify-center"
+          class="bg-linear-30 from-slate-100 to-slate-200 text-black mt-4 w-full flex flex-col gap-2 justify-between items-center"
         ></div>
       </main>
     </div>
