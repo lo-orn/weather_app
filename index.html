@@ -6,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>weather-app</title>
   </head>
-  <body class="min-h-screen bg-slate-50">
+  <body class="min-h-screen bg-slate-50 dark:bg-slate-900">
     <div id="app" class="min-h-screen flex items-center justify-center p-6">
-      <main class="w-full max-w-lg bg-white rounded-2xl shadow-lg p-6">
+      <main
+        class="w-full max-w-lg bg-white rounded-2xl shadow-lg p-6 dark:bg-slate-800 dark:border-slate-700"
+      >
         <h2
           id="quote"
-          class="text-center text-1xl font-bold text-slate-800 mb-6"
+          class="text-center text-1xl font-bold text-slate-800 mb-6 dark:text-white"
         ></h2>
         <form id="searchForm" class="flex flex-col sm:flex-row gap-3">
           <label for="search"></label>
           <input
-            class="flex-1 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700"
+            class="flex-1 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-700 dark:border-slate-600 dark:bg-slate-900 dark:placeholder:text-slate-400"
             type="text"
             name="searchText"
             id="searchText"
           />
           <button
             id="searchBtn"
-            class="rounded-xl bg-blue-500 px-6 py-3 text-black font-semibold hover:bg-blue-700 transition"
+            class="rounded-xl bg-blue-500 px-6 py-3 text-black font-semibold hover:bg-blue-700 transition dark:text-white"
           >
             Search
           </button>
