@@ -27,7 +27,7 @@ export const renderForecast = (
 
         row.append(date, temp, condition, icon);
 
-        // 👇 VIKTIGT: lägg in i DOM
+       
         container.appendChild(row);
 
 
