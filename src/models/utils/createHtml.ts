@@ -2,7 +2,9 @@ import type { Weather } from "../Weather";
 import { getWeatherQuote } from "./weatherQuote";
 
 export const createHtml = (weather: Weather) => {
-
+    
+const row = document.createElement("div")
+row.className = "flex items-center justify-center gap-8 mt-4";
 const results = document.getElementById("results")
 const quoteEl = document.getElementById("quote")
 
@@ -20,8 +22,12 @@ quoteEl.textContent = getWeatherQuote(
     currentText.textContent = weather.current.condition.text
     const temp = document.createElement("p")
     temp.textContent = `${weather.current.temp_c}°C `
+    const icon = document.createElement("img")
+    icon.src = weather.current.condition.icon
+    icon.className ="w-10 h-10 inline-block align-middle"
 
 
-results.append(locationHeader, currentText, temp)
+    row.append(locationHeader, currentText, temp, icon);
+    results.appendChild(row)
    
 }

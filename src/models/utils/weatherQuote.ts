@@ -2,7 +2,7 @@ export const getWeatherQuote = (condition: string, temp: number) : string => {
     const c = condition.toLocaleLowerCase();
 
     if(temp <= 0 ) {
-        return "Brr it's freezing outside, cozy up with some hot drink. 🥶"
+        return "Brr it's freezing outside, cozy up with a hot drink!🥶"
 
     }
 
