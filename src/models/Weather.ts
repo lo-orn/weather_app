@@ -1,6 +1,8 @@
 export type Weather = {
     location: {
       name: string;
+      lat: number;
+      lon: number
     };
     current: {
       temp_c: number;
