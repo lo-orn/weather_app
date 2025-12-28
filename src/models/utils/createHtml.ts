@@ -21,12 +21,6 @@ locationHeader.innerHTML ="";
 locationHeader.textContent = weather.location.name
 results.parentElement?.insertBefore(locationHeader, results);
 
-// if(days === 1) {
-//     quoteEl.textContent = getWeatherQuote(
-//         weather.current.condition.text,
-//         weather.current.temp_c
-//     )
-
 
 
 quoteEl.textContent = getWeatherQuote(

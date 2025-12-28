@@ -22,7 +22,7 @@ theInput.value = "";
 const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${encodeURIComponent(searchText)}&days=${days}&aqi=no&alerts=no`
 );
 const data: Weather = await response.json();
-
+console.log("lat:", data.location.lat, "lon:", data.location.lon);
 console.log("days returned:", data.forecast?.forecastday?.length);
 console.log(data)
 createHtml(data);
