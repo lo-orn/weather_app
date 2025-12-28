@@ -4,7 +4,7 @@ import { getWeatherQuote } from "./weatherQuote";
 
 
 
-export const createHtml = (weather: Weather, days: Number) => {
+export const createHtml = (weather: Weather) => {
     
 const row = document.createElement("div")
 row.className = " gap-8 mt-4";
