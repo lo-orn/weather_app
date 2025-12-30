@@ -59,8 +59,6 @@ locationBtn.addEventListener("click", () => {
         () => alert("Could not get your location")
     );
 
-  
-
     
 })
 
