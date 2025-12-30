@@ -9,52 +9,70 @@
   <body
     class="min-h-screen bg-linear-to-b from-slate-50 to-slate-200 text-slate-900"
   >
-    <div id="app" class="min-h-screen flex items-center justify-center p-6">
-      <main
-        class="w-full max-w-xl rounded-3xl border border-white/40 bg-white/70 backdrop-blur-xl shadow-[0_20px_60px_-25px_rgba(15,23,42,0.35)] p-8"
-      >
-        <h2
-          id="quote"
-          class="text-center text-2xl font-semibold tracking-tight text-slate-900 mb-6"
-        ></h2>
-        <form id="searchForm" class="flex flex-col sm:flex-row gap-3">
-          <label for="searchText"></label>
-          <input
-            class="placeholder:text-sm placeholder:text-center flex-1 rounded-2xl border border-slate-200 bg-white/70 px-5 py-3 text-base placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-sky-200 focus:border-sky-300 transition"
-            type="text"
-            name="searchText"
-            id="searchText"
-            placeholder="search by location or coordinates"
-          />
-          <select
-            id="daysSelect"
-            class="p-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-sky-200"
-          >
-            <option value="1">Today</option>
-            <option value="3">3 days</option>
-            <option value="5">5 days</option>
-            <option value="7">7 days</option>
-            <option value="10">10 days</option>
-            <option value="14">14 days</option>
-          </select>
-          <button
-            type="submit"
-            id="searchBtn"
-            class="rounded-2xl bg-slate-900 px-6 py-3 text-white font-semibold shadow-sm hover:shadow-md hover:bg-slate-800 active:scale-[0.99] transition"
-          >
-            Search
-          </button>
-        </form>
-        <h2
-          id="locationHeader"
-          class="text-l font-semibold mt-6 text-center"
-        ></h2>
+    <div class="min-h-screen flex flex-col items-center pt-[18vh] px-6">
+      <header class="text-center">
+        <h1
+          class="text-2xl md:text-3xl lg:text-3xl font-black tracking-tight text-slate-900"
+        >
+          WEATHER VIBES
+        </h1>
+      </header>
+      <div id="app" class="mt-10">
+        <main
+          class="w-full max-w-xl rounded-3xl border border-white/40 bg-white/70 backdrop-blur-xl shadow-[0_20px_60px_-25px_rgba(15,23,42,0.35)] p-8"
+        >
+          <h2
+            id="quote"
+            class="text-center text-2xl font-semibold tracking-tight text-slate-900 mb-6"
+          ></h2>
+          <form id="searchForm" class="flex flex-col sm:flex-row gap-3">
+            <label for="searchText"></label>
+            <div class="relative flex-1">
+              <input
+                class="w-full placeholder:text-sm placeholder:text-center rounded-2xl border border-slate-200 bg-white/70 px-5 pr-12 py-3 text-base placeholder:text-slate-400 focus:outline-none focus:ring-4 focus:ring-sky-200 focus:border-sky-300 transition"
+                type="text"
+                name="searchText"
+                id="searchText"
+                placeholder="search by location"
+              />
 
-        <div
-          id="results"
-          class="bg-linear-30 from-slate-100 to-slate-200 text-black mt-4 w-full flex flex-col gap-2 justify-between items-center"
-        ></div>
-      </main>
+              <img
+                src="/map-pin.png"
+                alt="location icon"
+                class="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 opacity-70 hover:cursor-pointer"
+                id="locationIcon"
+              />
+            </div>
+            <select
+              id="daysSelect"
+              class="p-2 rounded-2xl border border-slate-200 bg-white px-4 py-3 focus:outline-none focus:ring-4 focus:ring-sky-200"
+            >
+              <option value="1">Today</option>
+              <option value="3">3 days</option>
+              <option value="5">5 days</option>
+              <option value="7">7 days</option>
+              <option value="10">10 days</option>
+              <option value="14">14 days</option>
+            </select>
+            <button
+              type="submit"
+              id="searchBtn"
+              class="rounded-2xl bg-slate-900 px-6 py-3 text-white font-semibold shadow-sm hover:shadow-md hover:bg-slate-800 active:scale-[0.99] transition"
+            >
+              Search
+            </button>
+          </form>
+          <h2
+            id="locationHeader"
+            class="text-l font-semibold mt-6 text-center"
+          ></h2>
+
+          <div
+            id="results"
+            class="bg-linear-30 from-slate-100 to-slate-200 text-black mt-4 w-full flex flex-col gap-2 justify-between items-center"
+          ></div>
+        </main>
+      </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
